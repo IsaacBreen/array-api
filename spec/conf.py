@@ -25,25 +25,6 @@ author = 'Consortium for Python Data API Standards'
 release = '2022.05-DRAFT'
 
 
-# -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-extensions = [
-    'myst_parser',
-    'sphinx.ext.extlinks',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx_markdown_tables',
-    'sphinx_copybutton',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.autodoc',
-    'sphinx_math_dollar',
-    'sphinx.ext.mathjax'
-]
-
 autosummary_generate = True
 autodoc_typehints = 'signature'
 add_module_names = False
@@ -110,12 +91,21 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 myst_heading_anchors = 3
 myst_enable_extensions = ["colon_fence"]
 
-# -- Options for HTML output -------------------------------------------------
+extensions = [
+    'myst_parser',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx_markdown_tables',
+    'sphinx_copybutton',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.autodoc',
+    'sphinx_math_dollar',
+    'sphinx.ext.mathjax',
+    "sphinx_material",
+]
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-extensions.append("sphinx_material")
 html_theme_path = sphinx_material.html_theme_path()
 html_context = sphinx_material.get_html_context()
 html_theme = 'sphinx_material'
